@@ -1,0 +1,304 @@
+@charset "utf-8";
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+@font-face {
+  font-family: 'Sharp Sans ExtraboldItalic';
+  src: url('fonts/SharpSans-ExtraboldItalic.woff2') format('woff2'),
+  url('fonts/SharpSans-ExtraboldItalic.woff') format('woff');
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/montserrat-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/montserrat-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/montserrat-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/montserrat-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/montserrat-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/montserrat-v18-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/montserrat-v18-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/montserrat-v18-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/montserrat-v18-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/montserrat-v18-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('fonts/montserrat-v18-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/montserrat-v18-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: '8BIT-WONDER-Nominal';
+    src:url('fonts/8BIT-WONDER-Nominal.ttf.woff') format('woff'),
+        url('fonts/8BIT-WONDER-Nominal.ttf.svg#8BIT-WONDER-Nominal') format('svg'),
+        url('fonts/8BIT-WONDER-Nominal.ttf.eot'),
+        url('fonts/8BIT-WONDER-Nominal.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Super';
+    src: url('fonts/Superclarendon-Bold.otf');
+}
+
+body {
+	line-height: 1;
+	font-family: 'Montserrat';
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.gradient {
+  --borderWidth: 10px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient:after {
+  content: '';
+  position: absolute;
+  top: calc(-3 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 6);
+  width: calc(100% + var(--borderWidth) * 1);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  /*border-radius: calc(2 * var(--borderWidth));*/
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+.blink a {text-decoration: none; color: #f1be29;}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.startP {
+	padding: 4% 0 !important;
+	background-color: #ffffff !important;
+}
+
+@keyframes barberpole {
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes float-1 {
+	0% {
+		transform:translatey(0)
+	} 50% {
+		transform:translatey(-12px)
+	} to {
+		transform:translatey(0)
+	}
+}
+
+
+#topNav {background-color: #070707}
+
+#nav { float:right; z-index: 500; font-size: 1em; text-transform: uppercase; width:60%; }
+#nav ul {list-style-type: none;  text-align: right; float: right; padding:6%; }
+#nav li {display: inline-block; font-weight: 700; padding: 0 1%; padding: 2%; cursor: pointer;}
+#nav a {color: #ffffff; text-decoration: none;}
+
+#name {text-align: left;  display: inline-block; }
+#name a {padding: 2%; display: block;}
+
+.bgWhite {background-color: #ffffff;}
+.bgDark {background-color: #240e28;}
+
+.w33 {width: 33%;}
+.w40 {width: 40%;}
+.w50 {width: 50%;}
+.w60 {width: 60%; }
+.w70 {width: 70%; }
+.w80 {width: 80%; }
+.inline {display: inline-block; vertical-align: middle;}
+.mAuto {margin: auto;}
+.clear{ clear: both;}
+.p5p {padding: 5% 0 5% 0; position: relative;}
+.wrapper {/*background-color: #240e28;*/}
+
+#banner {width: 40%; padding: 2%; text-align: left; display: inline-block; }
+#banner img {width: 90%; height: auto; }
+#tagline h1 {color: #ffffff; font-size: 30px; background-color:#d8247c; text-align: center; font-size: 20px;}
+
+.container {/*background-color: #ffffff;*/ padding: 0px 0px 0px 0px; text-align: left;}
+.containerDark {background-color: #f2f2f2;}
+.containerDark p {color: #070707;}
+.startP p, #contact h2 {color: #090909;}
+
+#contact {text-align: center;}
+#contact p {font-size: 24px; line-height: 36px;}
+
+h1 {font-family: 'Super'; font-size: 44px; color: #f0f0f0; padding: 20px;}
+h2 {font-family: 'Super'; font-size: 40px; color: #f0f0f0; padding: 20px;}
+h3 {font-family: 'Super'; font-size: 34px; color: #f0f0f0; padding: 20px;}
+
+p {font-size: 16px; line-height: 24px; padding: 20px; text-align: center;}
+a {color: #a01321; font-weight: 700; text-decoration: underline;}
+a:hover {color: #bc1727;}
+/*a:visited {color: #c7196e;}*/
+
+#socials {text-align: center; padding: 10px;}
+#socials img {width: 10%; padding: 10px; display: inline-block;}
+
+
+strong {font-weight: 700; color: #272727;}
+
+#slider {width: 100%;}
+#slider img {width: 100%; height: auto;}
+
+#reel {background-color: #272727;}
+
+.textLeft {text-align: left;}
+
+.videoBox {padding: 5% 0;}
+
+.img70 {width: 70%; margin: 0 auto;}
+.img70 img {width: 100%; height: auto;}
+
+.profile img {margin: 0 auto; border-color: transparent;
+    border-radius: 0%; width: 100%; height: auto;}
+
+.wcidfu {text-align: left; vertical-align: top; margin: 0 0 5% 0;}
+.wcidfu img{width: 40%; margin: 0 auto 5% auto; display: block;}
+
+#footer {
+	background-color: #070707;
+	padding: 0%;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+
+.accordion {
+  cursor: pointer;
+  transition: 0.4s;
+}
+.accordion p {
+  color: #d8247c;
+}
+.accordion p:hover{
+  color: #f1be29;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.panel p {
+  font-size: 1em;
+  padding: 3%;
+}
+
+/* SPINNGIN TRIANGLES */
+
+.tri1 {width: 10%; top: 10%; left: -10%; position: absolute;}
+.tri2 {width: 8%; bottom: 10%; right: -10%; position: absolute;}
+.tri3 {width: 4%; bottom: 10%; left: 10%; position: absolute;}
+.rotator-right{
+
+  animation: rotate-right 60s linear infinite;
+  
+}
+.rotator-left{
+
+  animation: rotate-left 60s linear infinite;
+  
+}
+
+@keyframes rotate-right
+{
+    from { 
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-left
+{
+    from { 
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
