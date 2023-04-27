@@ -107,7 +107,7 @@
 }
 
 .slider > ul > .showli {
-    background-color: #7EC03D;
+    background-color: #46070a;
     -moz-animation: boing .5s forwards;
     -o-animation: boing .5s forwards;
     -webkit-animation: boing .5s forwards;
@@ -115,7 +115,7 @@
 }
 
 .slider > ul > li:hover {
-    background-color: #7EC03D;
+    background-color: #46070a;
 }
 
 .slider > .show {

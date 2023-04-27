@@ -302,3 +302,26 @@ strong {font-weight: 700; color: #272727;}
         transform: rotate(-360deg);
     }
 }
+
+
+
+@media only screen and (max-width: 600px) {
+
+#topNav {text-align: center !important;}
+#banner {width: 100%; padding: 5% 0 0 0; text-align: center !important;}
+
+#nav {width: 100%;}
+#nav ul {width: 100% !important; text-align: center;}
+
+
+  .w60, .w70 {width: 95%;}
+  #socials img {width: 30%;}
+
+.slider, 
+.slider > div {
+
+
+    height: 200px;
+
+}
+}
