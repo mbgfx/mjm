@@ -215,6 +215,8 @@ a:hover {color: #bc1727;}
 #socials {text-align: center; padding: 10px;}
 #socials img {width: 10%; padding: 10px; display: inline-block;}
 
+#logos {width: 90%; margin: 3% auto 0 auto; text-align: center;}
+#logos img {display: inline-block; width: 12%; padding: 1%; vertical-align:middle;}
 
 strong {font-weight: 700; color: #272727;}
 
